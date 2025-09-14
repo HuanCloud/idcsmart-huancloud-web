@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="zh" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢云 HUANCLOUD-智在云端，欢享无限！</title>
+    <meta name="keywords" content="便宜服务器,云服务器,服务器,云计算,欢云,国外服务器,香港服务器,HUANCLOUD,VPS,Server" />
+    <meta name="description" content="我们致力于提供高性价比的服务器。">
+    <link rel="icon" type="image/x-icon" href="/themes/web/huancloud/favicon.ico">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                container: {
+                    center: true,
+                    padding: "2rem",
+                    screens: {
+                        "2xl": "1400px",
+                    },
+                },
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 0.25rem)",
+                        sm: "calc(var(--radius) - 0.5rem)",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/themes/web/huancloud/style.css">
+
+</head>
+
+<body class="flex min-h-[100dvh] flex-col">
+    <!-- Header -->
+    <header id="header" class="sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 bg-transparent">
+        <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+            <a href="#" class="flex items-center gap-2 font-bold text-lg">
+                <img class="light-mode-item " src="/themes/web/huancloud/imgs/LOGO.svg" alt="logo" height="50px" width="110px">
+            </a>
+            <nav class="hidden md:flex gap-8">
+                <div class="relative group hidden md:block">
+                    <button type="button"
+                        class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-gray-100 flex items-center">
+                        产品
+                        <svg class="w-4 h-4 ml-1 transform transition-transform duration-200 group-hover:rotate-180"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-1">
+                            <a href="https://huancloud.cn/cart"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">云服务器</a>
+                            <a href="https://huancloud.cn/cart"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">轻量服务器</a>
+                            <a href="https://huancloud.cn/cart"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">虚拟主机</a>
+                            <a href="https://dash.cloudflare.com/login?lang=zh-hans-cn"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">CDN</a>
+                            <a href="https://ssl.quickso.cn"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">SSL证书</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#testimonials"
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-gray-100">评价</a>
+                <a href="#pricing"
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-gray-100">定价</a>
+                <a href="#support"
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-gray-100">支持</a>
+            </nav>
+            <div class="hidden md:flex gap-4 items-center">
+                <button id="theme-toggle"
+                    class="relative inline-flex items-center justify-center h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <span class="sr-only">Toggle theme</span>
+                    <div class="sun-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="m4.93 4.93 1.41 1.41"></path>
+                            <path d="m17.66 17.66 1.41 1.41"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="m4.93 19.07 1.41-1.41"></path>
+                            <path d="m17.66 6.34 1.41-1.41"></path>
+                        </svg></div>
+                    <div class="moon-icon hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg></div>
+                </button>
+                <a href="https://huancloud.cn/clientarea"
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-gray-100">
+                    控制台
+                </a>
+                <button onclick="window.location.href='https://huancloud.cn/register'"
+                    class="inline-flex items-center justify-center rounded-full text-sm font-medium h-10 px-6 bg-blue-600 text-white hover:bg-blue-700">
+                    免费注册
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="ml-1 h-4 w-4">
+                        <path d="m9 18 6-6-6-6"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="theme-toggle-mobile"
+                    class="relative inline-flex items-center justify-center h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <span class="sr-only">Toggle theme</span>
+                    <div class="sun-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 20v2"></path>
+                            <path d="m4.93 4.93 1.41 1.41"></path>
+                            <path d="m17.66 17.66 1.41 1.41"></path>
+                            <path d="M2 12h2"></path>
+                            <path d="M20 12h2"></path>
+                            <path d="m4.93 19.07 1.41-1.41"></path>
+                            <path d="m17.66 6.34 1.41-1.41"></path>
+                        </svg></div>
+                    <div class="moon-icon hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg></div>
+                </button>
+                <button id="mobile-menu-toggle"
+                    class="relative inline-flex items-center justify-center h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <span class="sr-only">Toggle menu</span>
+                    <div class="menu-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg></div>
+                    <div class="x-icon hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg></div>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-16 inset-x-0 bg-white/95 dark:bg-black/95 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
+            <div class="container mx-auto py-4 flex flex-col gap-4 px-4">
+                <div class="relative group">
+                    <button type="button"
+                        class="mobile-menu-link py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center justify-between w-full">
+                        产品
+                        <svg class="w-4 h-4 ml-2 transform transition-transform duration-200 group-hover:rotate-180"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div class="py-1">
+                            <a href="https://huancloud.cn/cart"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">云服务器</a>
+                            <a href="https://huancloud.cn/cart"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">轻量服务器</a>
+                            <a href="https://huancloud.cn/cart"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">虚拟主机</a>
+                            <a href="https://dash.cloudflare.com/login?lang=zh-hans-cn"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">CDN</a>
+                            <a href="https://ssl.quickso.cn"
+                                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">SSL证书</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#testimonials"
+                    class="mobile-menu-link py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">评价</a>
+                <a href="#pricing"
+                    class="mobile-menu-link py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">定价</a>
+                <a href="#support"
+                    class="mobile-menu-link py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">支持</a>
+                <div class="flex flex-col gap-2 pt-2 border-t border-gray-200 dark:border-gray-800">
+                    <a href="https：//console.vitebits.com"
+                        class="mobile-menu-link py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white">
+                        控制台
+                    </a>
+                    <button onclick="window.location.href='jump.html?page=register'"
+                        class="w-full inline-flex items-center justify-center rounded-full text-sm font-medium h-10 px-4 bg-blue-600 text-white hover:bg-blue-700">
+                        免费注册
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="ml-1 h-4 w-4">
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="w-full pt-12 md:pt-20 lg:pt-24 pb-20 md:pb-32 lg:pb-40 overflow-hidden">
+            <div class="container px-4 md:px-6 relative mx-auto">
+                <div
+                    class="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]">
+                </div>
+
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span
+                        class="mb-4 inline-block rounded-full px-4 py-1.5 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">覆盖全球可用区</span>
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400">
+                        智在云端,欢享无限!
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                        HUANCLOUD 以可靠、高性价比的云计算服务支撑客户业务，从入门级 LXC 实例到强大的独立服务器。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="window.location.href='jump.html?page=register'"
+                            class="inline-flex items-center justify-center rounded-full text-base font-medium h-12 px-8 bg-blue-600 text-white hover:bg-blue-700">
+                            免费注册
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="ml-2 h-4 w-4">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <button onclick="window.location.href='jump.html?page=console'"
+                            class="inline-flex items-center justify-center rounded-full text-base font-medium h-12 px-8 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">
+                            控制台
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-center gap-4 mt-6 text-sm text-gray-500 dark:text-gray-400">
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-4 w-4 mr-2 text-primary">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                            <span>全球可用区</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-4 w-4 mr-2 text-primary">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                            <span>分级产品</span>
+                        </div>
+                        <div class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="h-4 w-4 mr-2 text-primary">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                            <span>24*7服务</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mx-auto max-w-5xl">
+                    <div class="flex justify-center">
+                        <!-- Card item START -->
+                        <div class="map-container relative w-full max-w-4xl">
+                            <img loading="lazy" src="https://huancloud.cn/themes/web/yunyoo/assets/img/map2.png"
+                                alt="map" class="w-full h-auto opacity-60">
+                            <span
+                                class="absolute w-3 h-3 md:w-4 md:h-4 bg-blue-600 rounded-full border-2 border-white dark:border-gray-800 shadow-lg cursor-pointer map-marker z-10"
+                                style="top: 39.6%; left: 81.6%;" data-bs-toggle="tooltip" data-bs-html="true"
+                                data-bs-placement="left" title="中国(香港)"></span>
+                            <span
+                                class="absolute w-3 h-3 md:w-4 md:h-4 bg-blue-600 rounded-full border-2 border-white dark:border-gray-800 shadow-lg cursor-pointer map-marker z-10"
+                                style="top: 29.1%; left: 87.1%;" data-bs-toggle="tooltip" data-bs-html="true"
+                                data-bs-placement="left" title="日本(东京)"></span>
+                            <span
+                                class="absolute w-3 h-3 md:w-4 md:h-4 bg-blue-600 rounded-full border-2 border-white dark:border-gray-800 shadow-lg cursor-pointer map-marker z-10"
+                                style="top: 30.1%; left: 7.1%;" data-bs-toggle="tooltip" data-bs-html="true"
+                                data-bs-placement="left" title="美国(洛杉矶)"></span>
+                            <div
+                                class="absolute top-3/4 left-0 bg-blue-100 dark:bg-blue-900/20 rounded-lg p-3 px-4 shadow-lg backdrop-blur-sm">
+                                <h5 class="text-sm md:text-base font-normal text-gray-700 dark:text-gray-300">
+                                    <span class="text-blue-600 font-bold text-lg md:text-xl">3</span> 个国家地区
+                                </h5>
+                                <h5 class="text-sm md:text-base font-normal text-gray-700 dark:text-gray-300">
+                                    <span class="text-blue-600 font-bold text-lg md:text-xl">3</span> 个可用区域
+                                </h5>
+                            </div>
+                        </div>
+                        <!-- Card item END -->
+                    </div>
+                    <div
+                        class="absolute -bottom-6 -right-6 -z-10 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-blue-500/30 to-gray-500/30 blur-3xl opacity-70">
+                    </div>
+                    <div
+                        class="absolute -top-6 -left-6 -z-10 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-gray-500/30 to-blue-500/30 blur-3xl opacity-70">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="w-full py-20 md:py-32">
+            <div class="container px-4 md:px-6 mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <span
+                        class="rounded-full px-4 py-1.5 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">功能</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">云上增长新动力</h2>
+                    <p class="max-w-[800px] text-gray-600 dark:text-gray-400 md:text-lg">
+                        基于全球云计算基础架构，提供即开即用的云计算服务，构建体验创新、数据驱动和敏捷迭代等数字化能力，实现业务可持续增长。。
+                    </p>
+                </div>
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div
+                                class="h-10 w-10 rounded-full bg-blue-600/10 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-5 w-5">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">LXC 容器云</h3>
+                            <p class="text-gray-600 dark:text-gray-400">基于LXC架构的轻量级NAT云服务，高性价比，弹性可控。</p>
+                        </div>
+                    </div>
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div
+                                class="h-10 w-10 rounded-full bg-blue-600/10 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-5 w-5">
+                                    <line x1="12" x2="12" y1="20" y2="10"></line>
+                                    <line x1="18" x2="18" y1="20" y2="4"></line>
+                                    <line x1="6" x2="6" y1="20" y2="16"></line>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">虚拟私有服务器</h3>
+                            <p class="text-gray-600 dark:text-gray-400">基于KVM架构的NAT云服务器，由EPYC或Xeon驱动。</p>
+                        </div>
+                    </div>
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div
+                                class="h-10 w-10 rounded-full bg-blue-600/10 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-5 w-5">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">中国优化服务器</h3>
+                            <p class="text-gray-600 dark:text-gray-400">基于CN2、9929等中国优化线路的云服务器，高速可靠。</p>
+                        </div>
+                    </div>
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div
+                                class="h-10 w-10 rounded-full bg-blue-600/10 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-5 w-5">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">SSL证书</h3>
+                            <p class="text-gray-600 dark:text-gray-400">为您的业务保驾护航，保护网站安全可信，数据不再“裸奔”。</p>
+                        </div>
+                    </div>
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div
+                                class="h-10 w-10 rounded-full bg-blue-600/10 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-5 w-5">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">网站托管</h3>
+                            <p class="text-gray-600 dark:text-gray-400">使用为中国与国际客户特别优化的服务器托管您的网站。</p>
+                        </div>
+                    </div>
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div
+                                class="h-10 w-10 rounded-full bg-blue-600/10 dark:bg-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-5 w-5">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">CDN</h3>
+                            <p class="text-gray-600 dark:text-gray-400">通过我们全球 330 个数据中心加速您的网站。
+                                我们将您的流量路由到我们最近的数据中心，确保加载迅如闪电。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Logos Section -->
+        <section class="w-full py-12 border-y border-gray-200 dark:border-gray-800 bg-gray-50/30 dark:bg-gray-900/30">
+            <div class="container px-4 md:px-6 mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center">
+                    <p class="text-sm font-medium text-gray-500 dark:text-gray-400">我们和您信赖的企业合作</p>
+                    <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
+                        <a href="https://www.aliyun.com/minisite/goods?userCode=qic8yjsf"><img src="/themes/web/huancloud/imgs/aliyun.svg"
+                                alt="阿里云" width="120" height="60"
+                                class="h-8 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"></a></a>
+                        <a href="https://curl.qcloud.com/VxVBmWRK"><img src="/themes/web/huancloud/imgs/txyun.svg" alt="腾讯云" width="120"
+                                height="60"
+                                class="h-8 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"></a>
+                        <a href="https://www.bt.cn/u/ULXHXn"><img src="/themes/web/huancloud/imgs/bt.png" alt="dataforest" width="100"
+                                height="100"
+                                class="h-8 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0"></a>
+                        <img src="/themes/web/huancloud/imgs/cloudflare.svg" alt="hetzner" width="120" height="60"
+                            class="h-8 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                        <img src="/themes/web/huancloud/imgs/letsencrypt.svg" alt="hetzner" width="120" height="60"
+                            class="h-8 w-auto opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="w-full py-20 md:py-32 bg-gray-50/30 dark:bg-gray-900/30 relative overflow-hidden">
+            <div
+                class="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_40%,transparent_100%)]">
+            </div>
+            <div class="container px-4 md:px-6 relative mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+                    <span
+                        class="rounded-full px-4 py-1.5 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">工作原理</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">轻松且易于上手</h2>
+                    <p class="max-w-[800px] text-gray-600 dark:text-gray-400 md:text-lg">
+                        提供一站式服务，让您可以专注于业务发展，而无需担心基础设施管理。
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 md:gap-12 relative">
+                    <div
+                        class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-800 to-transparent -translate-y-1/2 z-0">
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center text-center space-y-4">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold shadow-lg">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold">创建账户</h3>
+                        <p class="text-gray-600 dark:text-gray-400">只需您的电子邮件即可在几秒钟内注册。开始无需信用卡。</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center text-center space-y-4">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold shadow-lg">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold">购买服务器</h3>
+                        <p class="text-gray-600 dark:text-gray-400">使用您喜欢的支付方式购买，我们支持支付宝支付。</p>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center text-center space-y-4">
+                        <div
+                            class="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-400 text-white text-xl font-bold shadow-lg">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold">开始应用</h3>
+                        <p class="text-gray-600 dark:text-gray-400">您的服务器将在一分钟内可用。在此之后即可开始业务部署。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="w-full py-20 md:py-32 bg-gray-50/30 dark:bg-gray-900/30 relative overflow-hidden">
+            <div
+                class="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_40%,transparent_100%)]">
+            </div>
+            <div class="container px-4 md:px-6 relative mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <span
+                        class="rounded-full px-4 py-1.5 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">价格</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">具有竞争力的定价</h2>
+                    <p class="max-w-[800px] text-gray-600 dark:text-gray-400 md:text-lg">
+                        我们提供业内极低的定价，让您可以获得最高性价比，而不用额外花费更多。
+                    </p>
+                </div>
+                <div class="mx-auto max-w-5xl pricing-tabs">
+                    <div class="flex justify-center mb-8">
+                        <div
+                            class="tabs-list inline-flex items-center justify-center rounded-full p-1 bg-gray-200 dark:bg-gray-800">
+                            <button data-tab="monthly" class="rounded-full px-6 py-1.5 text-sm font-medium">月付</button>
+                            <button data-tab="annually"
+                                class="rounded-full px-6 py-1.5 text-sm font-medium ml-2">年付</button>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="monthly">
+                        <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+                            <div
+                                class="relative overflow-hidden h-full rounded-lg border border-gray-200/40 dark:border-gray-800/40 shadow-md bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur">
+                                <div class="p-6 flex flex-col h-full">
+                                    <h3 class="text-2xl font-bold">虚拟私有服务器</h3>
+                                    <div class="flex items-baseline mt-4">
+                                        <span class="text-4xl font-bold">￥19.95起</span>
+                                        <span class="text-gray-500 dark:text-gray-400 ml-1">/月</span>
+                                    </div>
+                                    <p class="text-gray-500 dark:text-gray-400 mt-2">获取高性能和比LXC更独立的体验。</p>
+                                    <ul class="space-y-3 my-6 flex-grow">
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>采取Xeon/EPYC处理器</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>获得高达32GB的内存</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>采用KVM虚拟架构</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>在全球3个可用区中选择</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>可选独立IP</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="window.location.href='https://huancloud.cn/cart'"
+                                        class="w-full mt-auto inline-flex items-center justify-center rounded-full h-10 px-4 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                        立即订购
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden h-full rounded-lg border-2 border-blue-600 shadow-lg bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur">
+                                <div
+                                    class="absolute top-0 right-0 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-bl-lg">
+                                    最受欢迎</div>
+                                <div class="p-6 flex flex-col h-full">
+                                    <h3 class="text-2xl font-bold">LXC容器云</h3>
+                                    <div class="flex items-baseline mt-4">
+                                        <span class="text-4xl font-bold">￥0.5起</span>
+                                        <span class="text-gray-500 dark:text-gray-400 ml-1">/月</span>
+                                    </div>
+                                    <p class="text-gray-500 dark:text-gray-400 mt-2">基于LXC的网络优先云服务器。</p>
+                                    <ul class="space-y-3 my-6 flex-grow">
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>高达1Gbps带宽</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>24*7 高在线率</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>比VPS更低的价格</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>从全球可用区中选取</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>获得高达2TB流量</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="window.location.href='https://huancloud.cn/cart'"
+                                        class="w-full mt-auto inline-flex items-center justify-center rounded-full h-10 px-4 text-sm font-medium bg-blue-600 text-white hover:bg-blue-700">
+                                        立即订购
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden h-full rounded-lg border border-gray-200/40 dark:border-gray-800/40 shadow-md bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur">
+                                <div class="p-6 flex flex-col h-full">
+                                    <h3 class="text-2xl font-bold">网站托管</h3>
+                                    <div class="flex items-baseline mt-4">
+                                        <span class="text-4xl font-bold">￥0.5起</span>
+                                        <span class="text-gray-500 dark:text-gray-400 ml-1">/月</span>
+                                    </div>
+                                    <p class="text-gray-500 dark:text-gray-400 mt-2">简单易用的网站托管。</p>
+                                    <ul class="space-y-3 my-6 flex-grow">
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>采用美西优化线路</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>不计流量（公平使用）</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>支持PHP MYSQL</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>采用EasyPanel面板</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>低至150ms延时</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="window.location.href='https://huancloud.cn/cart'"
+                                        class="w-full mt-auto inline-flex items-center justify-center rounded-full h-10 px-4 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                        立即订购
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content hidden" id="annually">
+                        <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+                            <div
+                                class="relative overflow-hidden h-full rounded-lg border border-gray-200/40 dark:border-gray-800/40 shadow-md bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur">
+                                <div class="p-6 flex flex-col h-full">
+                                    <h3 class="text-2xl font-bold">虚拟私有服务器</h3>
+                                    <div class="flex items-baseline mt-4">
+                                        <span class="text-4xl font-bold">￥19.95起</span>
+                                        <span class="text-gray-500 dark:text-gray-400 ml-1">/月</span>
+                                    </div>
+                                    <p class="text-gray-500 dark:text-gray-400 mt-2">获取高性能和比LXC更独立的体验。</p>
+                                    <ul class="space-y-3 my-6 flex-grow">
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>采取Xeon/EPYC处理器</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>获得高达32GB的内存</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>采用KVM虚拟架构</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>在全球3个可用区中选择</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>可选独立IP</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="window.location.href='https://huancloud.cn/cart'"
+                                        class="w-full mt-auto inline-flex items-center justify-center rounded-full h-10 px-4 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                        立即订购
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden h-full rounded-lg border-2 border-blue-600 shadow-lg bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur">
+                                <div
+                                    class="absolute top-0 right-0 bg-blue-600 text-white px-3 py-1 text-xs font-medium rounded-bl-lg">
+                                    最受欢迎</div>
+                                <div class="p-6 flex flex-col h-full">
+                                    <h3 class="text-2xl font-bold">LXC容器云</h3>
+                                    <div class="flex items-baseline mt-4">
+                                        <span class="text-4xl font-bold">￥0.45起</span>
+                                        <span class="text-gray-500 dark:text-gray-400 ml-1">/月</span>
+                                    </div>
+                                    <p class="text-gray-500 dark:text-gray-400 mt-2">基于LXC的网络优先云服务器。</p>
+                                    <ul class="space-y-3 my-6 flex-grow">
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>高达20Gbps带宽</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>24*7 高在线率</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>比VPS更低的价格</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>从全球可用区中选取</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>获得高达2TB流量</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="window.location.href='https://huancloud.cn/cart'"
+                                        class="w-full mt-auto inline-flex items-center justify-center rounded-full h-10 px-4 text-sm font-medium bg-blue-600 text-white hover:bg-blue-700">
+                                        立即订购
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                class="relative overflow-hidden h-full rounded-lg border border-gray-200/40 dark:border-gray-800/40 shadow-md bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur">
+                                <div class="p-6 flex flex-col h-full">
+                                    <h3 class="text-2xl font-bold">网站托管</h3>
+                                    <div class="flex items-baseline mt-4">
+                                        <span class="text-4xl font-bold">￥0.45起</span>
+                                        <span class="text-gray-500 dark:text-gray-400 ml-1">/月</span>
+                                    </div>
+                                    <p class="text-gray-500 dark:text-gray-400 mt-2">简单易用的网站托管。</p>
+                                    <ul class="space-y-3 my-6 flex-grow">
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>采用美西优化线路</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>不计流量（公平使用）</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>支持PHP MYSQL</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>采用EasyPanel面板</span>
+                                        </li>
+                                        <li class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="h-4 w-4 mr-2 text-primary">
+                                                <path d="M20 6 9 17l-5-5"></path>
+                                            </svg>
+                                            <span>低至150ms延时</span>
+                                        </li>
+                                    </ul>
+                                    <button onclick="window.location.href='https://huancloud.cn/cart'"
+                                        class="w-full mt-auto inline-flex items-center justify-center rounded-full h-10 px-4 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700">
+                                        立即订购
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="w-full py-20 md:py-32">
+            <div class="container px-4 md:px-6 mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+                    <span
+                        class="rounded-full px-4 py-1.5 text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">推荐</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">深受全球客户喜爱</h2>
+                    <p class="max-w-[800px] text-gray-600 dark:text-gray-400 md:text-lg">
+                        不要只听我们说。看看我们的客户对产品的体验有什么看法。
+                    </p>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                            </div>
+                            <p class="text-lg mb-6 flex-grow">HUANCLOUD提供了前所未有的网络质量，让我们的客户得以以更低延迟访问。</p>
+                            <div
+                                class="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200/40 dark:border-gray-800/40">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-800 dark:text-gray-200 font-medium">
+                                    张
+                                </div>
+                                <div>
+                                    <p class="font-medium">张三</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">某网络加速平台所有者</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                            </div>
+                            <p class="text-lg mb-6 flex-grow">HUANCLOUD的LXC服务器提供了业内无与伦比的性价比，让我每个月花几毛钱就能访问全球互联网。</p>
+                            <div
+                                class="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200/40 dark:border-gray-800/40">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-800 dark:text-gray-200 font-medium">
+                                    李
+                                </div>
+                                <div>
+                                    <p class="font-medium">李四</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">企业客户</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="h-full overflow-hidden rounded-lg border border-gray-200/40 dark:border-gray-800/40 bg-gradient-to-b from-white dark:from-black to-gray-50/10 dark:to-gray-900/10 backdrop-blur transition-all hover:shadow-md">
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="h-4 w-4 text-yellow-500">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                            </div>
+                            <p class="text-lg mb-6 flex-grow">他们提供了非常强大的独立服务器，让我性能需求大的业务得以开展。</p>
+                            <div
+                                class="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200/40 dark:border-gray-800/40">
+                                <div
+                                    class="h-10 w-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-800 dark:text-gray-200 font-medium">
+                                    王
+                                </div>
+                                <div>
+                                    <p class="font-medium">王五</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">个人客户</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section
+            class="w-full py-20 md:py-32 bg-gradient-to-br from-blue-600 to-blue-500 text-white relative overflow-hidden">
+            <div
+                class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]">
+            </div>
+            <div class="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="container px-4 md:px-6 relative mx-auto">
+                <div class="flex flex-col items-center justify-center space-y-6 text-center">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">准备好上云了吗？</h2>
+                    <!-- <p class="mx-auto max-w-[700px] text-blue-100 md:text-xl">
+                        
+                    </p> -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                        <button onclick="window.location.href='https://huancloud.cn/register'"
+                            class="inline-flex items-center justify-center rounded-full text-base font-medium h-12 px-8 bg-white text-blue-600 hover:bg-gray-200">
+                            免费注册
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="ml-2 h-4 w-4">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </button>
+                        <button onclick="window.location.href='https://huancloud.cn/login'"
+                            class="inline-flex items-center justify-center rounded-full text-base font-medium h-12 px-8 bg-transparent border border-white text-white hover:bg-white/10">
+                            登入控制台
+                        </button>
+                    </div>
+                    <p class="text-sm text-blue-100 mt-4">
+                        全球可用区 高可用性 高性价比
+                    </p>
+                </div>
+                <!-- 添加的支持信息 -->
+                <div class="mt-4  flex flex-col items-center justify-center space-y-6 text-center" id="support">
+                    <p class="text-blue-200 text-sm mb-2 font-bold">获取支持:</p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                        <a href="mailto:admin@huancloud.cn"
+                            class="support-link text-blue-200 text-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            admin@huancloud.cn
+                        </a>
+                        <a href="https://t.me/huan_cloud" target="_blank"
+                            class="support-link text-blue-200 text-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.14.141-.259.259-.374.261l.213-3.053 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.136-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
+                            </svg>
+                            官方TG群
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Integrated Footer -->
+            <div class="mt-20 pt-8 border-t border-white/20 text-center">
+                <p class="text-xs text-blue-200">
+                    &copy; 2025 HUANCLOUD. 保留所有权利。
+                </p>
+                <div class="flex justify-center gap-6 mt-4">
+                    <a href="https://huancloud.cn/knowledgebaseview?id=1"
+                        class="text-xs text-blue-200 hover:text-white transition-colors">服务条款</a>
+                    <a href="https://huancloud.cn/submitticket"
+                        class="text-xs text-blue-200 hover:text-white transition-colors">提交工单</a>
+                    <a href="https://huancloud.cn/news"
+                        class="text-xs text-blue-200 hover:text-white transition-colors">站点新闻</a>
+                    <a href="https://huancloud.cn/knowledgebase"
+                        class="text-xs text-blue-200 hover:text-white transition-colors">帮助中心</a>
+                    <a href="https://up.quickso.cn/status/huancloud"
+                        class="text-xs text-blue-200 hover:text-white transition-colors">服务状态</a>
+
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="/themes/web/huancloud/script.js"></script>
+</body>
+
+</html>

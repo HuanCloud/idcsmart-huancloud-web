@@ -1,0 +1,123 @@
+:root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 221 83% 53%;
+    --radius: 1rem;
+}
+
+.dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 217 91% 60%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+
+/* Additional styles for components that are hard to replicate with just Tailwind */
+[data-state=open]>div {
+    display: block;
+}
+
+[data-state=closed]>div {
+    display: none;
+}
+
+.accordion-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.tabs-list button[aria-selected="true"] {
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
+}
+
+.tabs-list button {
+    background-color: hsl(var(--muted));
+    color: hsl(var(--muted-foreground));
+}
+
+.dark .tabs-list button[aria-selected="true"] {
+    background-color: hsl(var(--foreground));
+    color: hsl(var(--background));
+}
+
+.dark .tabs-list button {
+    background-color: hsl(var(--muted));
+    color: hsl(var(--foreground));
+}
+
+/* Map marker animations */
+.map-marker {
+    animation: pulse 2s infinite;
+    transform: translate(-50%, -50%);
+    will-change: transform, opacity;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+}
+
+.map-marker:hover {
+    animation: none;
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 1;
+}
+
+/* Ensure map container has proper positioning context */
+.map-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
