@@ -30,6 +30,8 @@ HUANCLOUD Themes 会持续维护更新和优化完善，不断提供更多的新
 1. 将所有文件复制到 魔方财务 安装目录下的 `/public/themes/web` 目录
 2. 通过您的后台修改模板为 `huancloud` 即可
 
-   ## 许可证
+## 许可证
+
+模板大部分内容来自https://www.vitebits.com/ ，进行了二次开发。
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
